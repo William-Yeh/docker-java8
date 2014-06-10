@@ -3,9 +3,9 @@ Docker-Java8
 
 ## Summary
 
-Repository name in Docker Index: **[williamyeh/docker-java8](https://index.docker.io/u/williamyeh/docker-java8/)**
+Repository name in Docker Hub: **[williamyeh/docker-java8](https://registry.hub.docker.com/u/williamyeh/docker-java8/)**
 
-This repository contains **Dockerfile** of [Java](https://www.java.com/) for [Docker](https://www.docker.io/)'s [trusted build](https://index.docker.io/u/williamyeh/docker-java8/) published to the public [Docker Registry](https://index.docker.io/).
+This repository contains **Dockerfile** of [Java](https://www.java.com/) for [Docker](http://www.docker.com/)'s [trusted build](https://registry.hub.docker.com/u/williamyeh/docker-java8/) published to the public [Docker Registry](https://registry.hub.docker.com/).
 
 
 
@@ -15,24 +15,24 @@ This repository contains **Dockerfile** of [Java](https://www.java.com/) for [Do
 
 This docker image contains the following software stack:
 
-- OS: Debian jessie (built from [debian:jessie](https://index.docker.io/_/debian/)).
+- OS: Debian jessie (built from [debian:jessie](https://registry.hub.docker.com/_/debian/)).
 
 - Java: Oracle JDK 1.8.0_05-b13
 
 
 ### Dependencies
 
-- [debian:jessie](https://index.docker.io/_/debian/).
+- [debian:jessie](https://registry.hub.docker.com/_/debian/).
 
 
 
 ## Why yet another Java image for Docker?
 
-There has been quite a few Java images for Docker (e.g., [search](https://index.docker.io/search?q=java) in the Docker Index), so why reinvent the wheel?
+There has been quite a few Java images for Docker (e.g., [search](https://registry.hub.docker.com/search?q=java) in the Docker Hub), so why reinvent the wheel?
 
 In the beginning I used the [pulse00/java](https://github.com/dubture-dockerfiles/java). It worked well, but left some room for improvement:
 
-- *Base OS image* - It was built from [stackbrew/ubuntu:13.10](https://index.docker.io/u/stackbrew/ubuntu/), which may not be the smallest one.  On the other hand, [debian:jessie](https://index.docker.io/_/debian/), as recommended in this [article](http://crosbymichael.com/dockerfile-best-practices-take-2.html), worth a try.
+- *Base OS image* - It was built from [stackbrew/ubuntu:13.10](https://registry.hub.docker.com/u/stackbrew/ubuntu/), which may not be the smallest one.  On the other hand, [debian:jessie](https://registry.hub.docker.com/_/debian/), as recommended in this [article](http://crosbymichael.com/dockerfile-best-practices-take-2.html), worth a try.
 
 - *Unnecessary dependencies* - It installed, at the very beginning of its Dockerfile, the [software-properties-common](https://packages.debian.org/sid/admin/software-properties-common) package, which in turns installed some Python3 packages.  I prefered to incorporate these stuff only when absolutely needed.
 
@@ -46,7 +46,7 @@ If you're using a Docker-friendly OS (e.g., CoreOS, Debian, Ubuntu):
 
 1. Install [Docker](https://www.docker.io/), if necessary.
 
-2. Download this [trusted build](https://index.docker.io/u/williamyeh/docker-java8/) from public [Docker Registry](https://index.docker.io/):
+2. Download this [trusted build](https://registry.hub.docker.com/u/williamyeh/docker-java8/) from public [Docker Hub](https://registry.hub.docker.com/):
 
    ```
    $ docker pull williamyeh/docker-java8
