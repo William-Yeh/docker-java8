@@ -42,7 +42,7 @@ Therefore, I built this Docker image on my own, also as an exercise.
 
 ## Installation on Docker-friendly OS
 
-If you're using a Docker-friendly OS (e.g., CoreOS, Debian, Ubuntu):
+If you're using a Docker-friendly OS (e.g., CoreOS, Debian, Ubuntu) or Windows/MacOSX powered by [boot2docker](http://boot2docker.io/):
 
 1. Install [Docker](http://www.docker.com/), if necessary.
 

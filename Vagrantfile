@@ -8,7 +8,6 @@ VAGRANTFILE_API_VERSION = "2"
 #
 docker_image = "williamyeh/docker-java8"
 $script = <<SCRIPT
-exit
 echo Downloading Docker image: \'#{docker_image}\'...
 echo This may take minutes...
 
