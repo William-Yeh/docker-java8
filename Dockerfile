@@ -12,25 +12,21 @@ FROM debian:jessie
 
 
 # add webupd8 repository
-RUN echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" | tee /etc/apt/sources.list.d/webupd8team-java.list
-RUN echo "deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" | tee -a /etc/apt/sources.list.d/webupd8team-java.list
-RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EEA14886
-RUN apt-get update
+RUN \
+    echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" | tee /etc/apt/sources.list.d/webupd8team-java.list  && \
+    echo "deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" | tee -a /etc/apt/sources.list.d/webupd8team-java.list  && \
+    apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EEA14886  && \
+    apt-get update
 
 
 # install Java
-RUN echo debconf shared/accepted-oracle-license-v1-1 select true | debconf-set-selections
-RUN echo debconf shared/accepted-oracle-license-v1-1 seen true | debconf-set-selections
-RUN apt-get install -y --force-yes oracle-java8-installer
-
-
-# update-alternatives --config java
-RUN apt-get install oracle-java8-set-default
-
-
-# clean up
-RUN apt-get clean
+RUN \
+    echo debconf shared/accepted-oracle-license-v1-1 select true | debconf-set-selections  && \
+    echo debconf shared/accepted-oracle-license-v1-1 seen true | debconf-set-selections  && \
+    apt-get install -y --force-yes oracle-java8-installer oracle-java8-set-default  && \
+    apt-get clean
 
 
 # define default command
 CMD ["java"]
+
