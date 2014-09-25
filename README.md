@@ -15,7 +15,7 @@ This docker image contains the following software stack:
 
 - OS: Debian jessie (built from [debian:jessie](https://registry.hub.docker.com/_/debian/)).
 
-- Java: Oracle JDK 1.8.0_11-b12
+- Java: Oracle JDK 1.8.0_20-b26
 
 
 ### Dependencies
