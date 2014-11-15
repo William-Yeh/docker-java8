@@ -27,6 +27,7 @@ RUN \
     \
     \
     echo "===> clean up..."  && \
+    rm -rf /var/cache/oracle-jdk8-installer  && \
     apt-get clean
 
 
