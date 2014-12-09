@@ -28,7 +28,8 @@ RUN \
     \
     echo "===> clean up..."  && \
     rm -rf /var/cache/oracle-jdk8-installer  && \
-    apt-get clean
+    apt-get clean  && \
+    rm -rf /var/lib/apt/lists/*
 
 
 # define default command
